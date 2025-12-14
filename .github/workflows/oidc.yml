@@ -1,0 +1,27 @@
+name: Azure lOGIN WITH oidc
+
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write  #REQUIRED for OIDC
+  contents: read
+
+jobs:
+  login:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Azure login (OIDC)
+        uses: azure/login@v2
+        with:
+          tenant-id: <TENANT_ID>
+          subscription-id: <SUBSCRIPTION_ID>
+          client-id: <CLIENT_ID>
+
+      - name: Verify Azure context
+        run: |
+          az account show
