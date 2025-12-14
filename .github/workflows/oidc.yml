@@ -1,4 +1,4 @@
-name: Azure lOGIN WITH oidc
+name: Azure Login with OIDC
 
 on:
   workflow_dispatch:
