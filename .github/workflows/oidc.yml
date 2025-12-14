@@ -18,9 +18,9 @@ jobs:
       - name: Azure login (OIDC)
         uses: azure/login@v2
         with:
-          tenant-id: <TENANT_ID>
-          subscription-id: <SUBSCRIPTION_ID>
-          client-id: <CLIENT_ID>
+          tenant-id: 97603b3b-8e71-43e5-970d-6b7035a38e8c
+          subscription-id: 308ad2ec-c9ff-4919-82dc-a6afdb59a53a
+          client-id: df7e1094-2878-40b2-b4ae-3b4350cf9b90
 
       - name: Verify Azure context
         run: |
